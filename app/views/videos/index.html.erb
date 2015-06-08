@@ -1,0 +1,25 @@
+<div class="hero">
+	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">
+</div>	
+<h2>TRAINING VIDEO</h2>
+<div class="up">
+	<%= link_to 'Post Video   ', "videos/new" %><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</div>
+
+<% @videos.each do |video| %>
+	<div class="contain">
+		<iframe src="https://www.youtube.com/embed/<%= YoutubeID.from(video.source) %>?modestbranding=1" frameborder="0" seamless></iframe>
+			<div class="textFrame">
+				<p><span class="idThumb"><%= image_tag video.user.image.url(:small) %>  </span>     <%= video.user.user_name %></p>
+				<h3><%= link_to video.title, video_path(video.id) %></h3>
+				<p><%= video.description %></p>
+				<% if current_user != nil && current_user.id == video.user_id %>
+					<%= link_to 'Edit Video   ', edit_video_path(video.id) %>
+					<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+				<% else %>
+				
+				<% end %>	
+			</div>
+	</div>
+<% end %>
+<%= link_to "See users", users_path %></br>

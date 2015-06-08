@@ -1,0 +1,7 @@
+<h2>USERS</h2>
+<% @users.each do |u| %>
+	<div class="vid-contain">
+		<h3><%= link_to u.user_name, user_path(u) %></h3>
+	</div>
+<% end %>
+<%= link_to "Go to Video", videos_path %></br>

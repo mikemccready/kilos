@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KILOS</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="//use.typekit.net/dbt7vos.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body>
+
+
+<nav class="navbar navbar-default always-open">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <% if current_user %>
+    <div class="navbar-header">
+      <div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="idThumb"><%= image_tag current_user.image.url(:small) %></span><span class="caret"></span>
+      </div>
+      <img src="<%= asset_path( 'Menu_Logo.png' ) %>" id="menu_logo">
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ 
+      <ul class="nav navbar-nav navbar-right">
+        <li>Hi <%= current_user.user_name%></li>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+      </ul>
+    <% else %>
+    <div class="navbar-header">
+      <div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-user fa-2x"></i><span class="caret"></span>
+      </div>
+      <img src="<%= asset_path( 'Menu_Logo.png' ) %>" id="menu_logo">
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ 
+      <ul class="nav navbar-nav navbar-right">
+			<li><%= link_to "Login", new_session_path %></li>
+			<li><%= link_to "Signup", new_user_path %></li>
+      </ul>
+
+		</ul>
+	<% end %>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+
+<div class="wrap">
+	<%= yield %>
+</div>
+
+</body>
+</html>
