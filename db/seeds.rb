@@ -7,7 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+User.delete_all
+User.create([{user_name:"admin",
+			   email:"admin@kilos.com",
+			   password_digest:"yep",
+ }
 
+	])
 
 Video.delete_all
 Video.create([{source:"https://www.youtube.com/watch?v=mtQvMfBQYXA",
