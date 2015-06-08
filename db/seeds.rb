@@ -10,9 +10,9 @@
 
 
 Video.delete_all
-Video.create([{source:"lkjdf",
-			   title:"somestuff",
-			   description:"morestuff",
+Video.create([{source:"https://www.youtube.com/watch?v=mtQvMfBQYXA",
+			   title:"Kurt Osiander | Armbar + Choke",
+			   description:"Kurt Osiander's Move of the Week - Armbar + Choke",
 			   user_id:1}
 
 	])
