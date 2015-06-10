@@ -54,8 +54,6 @@
  }
 
  body {
-
-
  	font-family: 'futura-pt';
  	background-color: rgba(245,245,245,1);
  }
@@ -84,6 +82,8 @@ a:hover {
 }
 
 .up {
+	float:right;
+	text-align:right;
 	display: inline-block;
 	right:0;
 	color:red;

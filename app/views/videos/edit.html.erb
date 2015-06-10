@@ -1,6 +1,7 @@
 <h2>EDIT POST</h2>
 
 <%= form_for @video do |v| %>
+<div class=form-horizontal>
 	<div>
 		<%= v.label :source %></br>
 		<%= v.text_field :source %>
@@ -16,6 +17,7 @@
   	<div> 
     	<%= v.submit "Post" %> 
   	</div> 
+</div>  	
 <% end %>
 
 <%= link_to "Back to list", videos_path %></br>
