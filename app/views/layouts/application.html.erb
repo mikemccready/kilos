@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="//use.typekit.net/dbt7vos.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
-<meta name="viewport" content="width=device-width, initial-scale=1"></head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"></head>
 <body>
 
 
@@ -29,7 +29,8 @@
  
       <ul class="nav navbar-nav navbar-right">
         <li>Hi <%= current_user.user_name%></li>
-        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+        <li><%= link_to "Sign Out", logout_path, method: "delete" %></li>
+        <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
       </ul>
     <% else %>
     <div class="navbar-header">

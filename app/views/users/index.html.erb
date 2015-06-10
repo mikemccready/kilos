@@ -4,7 +4,7 @@
 		<h3><%= link_to u.user_name, user_path(u) %></h3>
 			<% if (current_user != nil && current_user.id == u.id) ||
 				(current_user != nil && current_user.id == 1) %>
-				<%= link_to 'Edit User   ', edit_user_path(u.id) %>
+				<%= link_to 'Edit Profile   ', edit_user_path(u.id) %>
 				<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
 			<% else %>		
 			<% end %>
