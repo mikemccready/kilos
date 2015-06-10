@@ -10,12 +10,15 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show', as: :user
   get "signup" => "users#new", as: :new_user
   post "users" => "users#create"
+  get "users/:id/edit" => "users#edit", as: :edit_user
+  patch "users/:id" => "users#update"
+  delete "users/:id" => "users#destroy"
 
   get "videos" => "videos#index"
   get "videos/new" => "videos#new", as: :new_video
   post "videos" => "videos#create"
   get "videos/:id" => "videos#show", as: :video
-  get "videos:id/edit" => "videos#edit", as: :edit_video
+  get "videos/:id/edit" => "videos#edit", as: :edit_video
   patch "videos/:id" => "videos#update"
   delete "videos/:id" => "videos#destroy"
 
