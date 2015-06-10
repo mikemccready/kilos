@@ -10,7 +10,9 @@
 	<div class="contain">
 		<iframe src="https://www.youtube.com/embed/<%= YoutubeID.from(video.source) %>?modestbranding=1" frameborder="0" seamless></iframe>
 			<div class="textFrame">
-				<p><span class="idThumb"><%= image_tag video.user.image.url(:small) %>  </span>     <%= video.user.user_name %></p>
+				<span class="idThumb"><%= image_tag video.user.image.url(:small) %>  </span>     
+				<%= video.user.user_name %>
+				<%= video.updated_at.strftime("Uploaded %b %-d, %Y") %>
 				<h3><%= link_to video.title, video_path(video.id) %></h3>
 				<p><%= video.description %></p>
 				<% if current_user != nil && current_user.id == video.user_id %>
