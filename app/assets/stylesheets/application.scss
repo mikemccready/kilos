@@ -30,8 +30,8 @@
  }
 
  nav button {
- height:3em;
- border:none;
+ 	height: 3em;
+ 	border: none;
  }
 
  .idThumb {
@@ -55,7 +55,7 @@
 
  body {
  	font-family: 'futura-pt';
- 	background-color: rgba(245,245,245,1);
+ 	background-color: rgba(240,240,240,1);
  }
 
 nav {
@@ -78,7 +78,7 @@ a {
 }
 
 a:hover {
-	color: red;
+	color: rgb(244,30,30);
 }
 
 .up {
@@ -86,11 +86,11 @@ a:hover {
 	text-align:right;
 	display: inline-block;
 	right:0;
-	color:red;
+	color:rgb(244,30,30);
 }
 
 span {
-	color:red;
+	color: rgb(244,30,30);
 }
 
 h2 {
@@ -99,7 +99,7 @@ h2 {
 	font-weight: normal;
 	letter-spacing: .125em;
 	margin: 1em 5% 0;	
-	font-size: 1.75em;
+	font-size: 2em;
 }
 
 iframe {
@@ -124,10 +124,35 @@ p {
 
 }
 
+
 form {
-	margin: 2.5em 5%;
+	margin: 2em 5%;
 	width: 90%;
 	max-width: 50em;
+
+}
+
+.form-control {
+	border: none;	
+}
+
+
+
+.submit {
+	width:100%;
+	height: 2em;
+	font-size: 1.5em;
+	background-color: rgb(80,90,40);
+	color: white;
+	font-family: 'League Gothic';
+	letter-spacing: .125em;
+	border:none;
+}
+
+#login {
+	background-color: white;
+	color: rgb(80,90,40);
+	margin-top: .5em
 }
 
 
