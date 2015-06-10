@@ -1,9 +1,10 @@
-<div class="hero">
-	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">
-</div>	
-<h2>TRAINING VIDEO</h2>
-<div class="up">
-	<%= link_to 'Post Video   ', "videos/new" %><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+<div class="pageHead">
+	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">	
+	<h2>TRAINING VIDEO</h2>
+	<div class="up">
+		<%= link_to 'Post Video     ', "videos/new" %>
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+	</div>	
 </div>
 
 <% @videos.each do |video| %>
@@ -25,4 +26,5 @@
 			</div>
 	</div>
 <% end %>
+
 <%= link_to "See users", users_path %></br>

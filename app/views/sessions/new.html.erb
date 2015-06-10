@@ -1,4 +1,10 @@
-<h2 class="formHead">LOGIN</h2>
+<div class="pageHead">
+  <img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero"> 
+  <h2>SIGN IN</h2>
+  <div class="up">
+    <%= link_to 'View as Guest >', "videos" %>
+  </div>  
+</div>
 
 <%= form_for(:session, url: login_path) do |f| %> 
 	<div class="form-group">
@@ -9,7 +15,8 @@
 		<label>Password</label>	 	
   		<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
   	</div>	
-  <%= f.submit "Log in", class: "submit" %>
+  <%= f.submit "SIGN IN", class: "submit" %>
+  <button class="submit" id="login"><%= link_to "JOIN KILOS", new_user_path %></button>
   
 <% end %>
 

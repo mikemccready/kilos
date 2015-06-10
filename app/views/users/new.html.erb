@@ -1,10 +1,12 @@
-<h2 class="formHead">SIGN UP</h2>
+<div class="pageHead">
+  <img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero"> 
+  <h2>SIGN UP</h2>
+  <div class="up">
+    <%= link_to 'View as Guest', "videos" %>
+  </div>  
+</div>
 
 <%= form_for(@user) do |f| %>
-  <div class="form-group">
-    <label>Profile Picture</label>
-    <%= f.file_field :image, class: "picUpload"%>
-  </div>
   <div class="form-group">
     <label>User Name</label>
     <%= f.text_field :user_name, placeholder: "Enter User Name", class: "form-control" %>
@@ -20,6 +22,10 @@
   <div class="form-group">
     <label>Confirm Password</label>
       <%= f.password_field :password_confirmation, placeholder:"Confirm Password", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label>Profile Picture</label>
+    <%= f.file_field :image, class: "picUpload"%>
   </div>
   <%= f.submit "JOIN KILOS", class: "submit" %> 
   <button class="submit" id="login"><%= link_to "LOGIN", new_session_path %></button> 
