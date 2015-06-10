@@ -1,5 +1,5 @@
-<h2>SIGN UP</h2>
-<form>
+<h2 class="formHead">SIGN UP</h2>
+
 <%= form_for(@user) do |f| %>
   <div class="form-group">
     <label>Profile Picture</label>
@@ -24,4 +24,3 @@
   <%= f.submit "JOIN KILOS", class: "submit" %> 
   <button class="submit" id="login"><%= link_to "LOGIN", new_session_path %></button> 
 <% end %>
-</form> 

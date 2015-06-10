@@ -20,7 +20,6 @@
 
 
  html {
-
  	font-size: .9em;
  	font-weight: 400;
  }
@@ -124,19 +123,21 @@ p {
 
 }
 
+.formHead {
+	margin: .5em 5% 0;
+	font-size: 3em;
+	line-height: .5em;	
+}
 
 form {
 	margin: 2em 5%;
 	width: 90%;
 	max-width: 50em;
-
 }
 
 .form-control {
 	border: none;	
 }
-
-
 
 .submit {
 	width:100%;
@@ -163,6 +164,7 @@ form {
 		width: 50%;
 		height: 27.5vw;
 	}
+	
 	.textFrame {
 		display:inline-block;
 		padding: 0 5%;
