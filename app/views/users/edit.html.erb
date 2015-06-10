@@ -29,3 +29,5 @@
   </div>
   <%= f.submit "UPDATE PROFILE", class: "submit" %> 
   <% end %>
+
+  <%= link_to "Delete Profile", user_path, method: :delete, data: { confirm: "Are you sure you want to delete this profile?"} %> 
