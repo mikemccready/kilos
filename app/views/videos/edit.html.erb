@@ -1,5 +1,6 @@
 <h2>EDIT POST</h2>
-
+<!-- form to edit a video post -->
+<!-- page is only available to the uploader and admin -->
 <%= form_for @video do |v| %>
 <div class=form-horizontal>
 	<div>
@@ -19,6 +20,7 @@
   	</div> 
 </div>  	
 <% end %>
-
+<!-- back to video feed -->
 <%= link_to "Back to list", videos_path %></br>
+<!-- delete video -->
 <%= link_to "Delete video", video_path, method: :delete, data: { confirm: "Are you sure you want to delete this video?"} %>

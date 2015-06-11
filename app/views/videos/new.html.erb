@@ -1,5 +1,5 @@
 <h2>POST VIDEO</h2>
-
+<!-- form for video upload -->
 <%= form_for @video do |v| %>
 	<div>
 		<%= v.label :source %></br>
@@ -17,4 +17,6 @@
     	<%= v.submit "Post" %> 
   	</div> 
 <% end %>
+
+<!-- link to video feed -->
 <%= link_to "Back to list", videos_path %></br>

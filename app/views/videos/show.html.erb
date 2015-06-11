@@ -1,17 +1,20 @@
 <div class="contain">
+	<!-- wrap around video content -->
 	<div class="vidframe">
 		<iframe src="https://www.youtube.com/embed/<%= YoutubeID.from(@video.source) %>?modestbranding=1" frameborder="0" seamless></iframe>
 		<h3><%= @video.title %></h3>
-	
 		<p><%= @video.description %></p>
-	
+		<!-- if the current user is signed are able to edit their own posts, or if the user is the admin -->
 		<% if (current_user != nil && current_user.id == @video.user_id) ||
 			(current_user != nil && current_user.id == 1) %>
 			<%= link_to 'Edit Video   ', edit_video_path(@video.id) %>
 			<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-		<% else %>		
+		<% else %>
+			<!-- edit option not visable -->
 		<% end %>
 	</div>
 </div>
+
+<!-- link back to video feed -->
 <%= link_to "Back to list", videos_path %></br>
 

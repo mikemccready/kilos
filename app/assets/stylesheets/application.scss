@@ -85,7 +85,7 @@ nav button {
 .pageHead h2 {
 	position:absolute;
 	display: inline-block;
-	font-family: "league-gothic";
+	font-family: "league-gothic","league gothic","futura";
 	letter-spacing: .125em;
 	bottom: -2em;
 	margin:0;
@@ -118,7 +118,6 @@ nav {
 a {
 	text-decoration: none;
 	color: black;
-	font-weight:700;
 }
 
 a:hover {
@@ -150,6 +149,7 @@ iframe {
 
 
 .contain h3 {
+	font-size: 1.25em;
 	font-weight: 700;
 	margin: .25em 0;
 
@@ -190,7 +190,7 @@ form {
 	font-size: 1.5em;
 	background-color: black;
 	color: white;
-	font-family: "league-gothic";
+	font-family: "league-gothic","league gothic","futura";
 	letter-spacing: .125em;
 	border:none;
 }

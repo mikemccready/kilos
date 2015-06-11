@@ -7,25 +7,33 @@
 	</div>	
 </div>
 
+
+<!-- iterates through each uploaded video into a formatted container -->
 <% @videos.each do |video| %>
 	<div class="contain">
+		<!-- uploader profile picture, user name, and time uploaded-->
 		<div class="idStamp">
 			<span class="idThumb"><%= image_tag video.user.image.url(:small) %></span>
 			<%= link_to video.user.user_name, user_path(video.user) %>
 			<span class="dateStamp"><%= video.updated_at.strftime("Uploaded %b %-d, %Y") %></span>
-		</div>	
+		</div>
+		<!-- video frame	 -->
 		<iframe src="https://www.youtube.com/embed/<%= YoutubeID.from(video.source) %>?modestbranding=1" frameborder="0" seamless></iframe>
-			<div class="textFrame">
-				<h3><%= link_to video.title, video_path(video.id) %></h3>
-				<p><%= video.description %></p>
-				<% if (current_user != nil && current_user.id == video.user_id) ||
-					(current_user != nil && current_user.id == 1) %>
-					<%= link_to 'Edit Video   ', edit_video_path(video.id) %>
-					<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-				<% else %>		
-				<% end %>	
-			</div>
+		<!-- video description -->
+		<div class="textFrame">
+			<h3><%= link_to video.title, video_path(video.id) %></h3>
+			<p><%= video.description %></p>
+			<!-- if the current user is signed are able to edit their own posts, or if the user is the admin -->
+			<% if (current_user != nil && current_user.id == video.user_id) ||
+				(current_user != nil && current_user.id == 1) %>
+				<%= link_to 'Edit Video   ', edit_video_path(video.id) %>
+				<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+			<% else %>	
+				<!-- edit option not visable -->	
+			<% end %>	
+		</div>
 	</div>
 <% end %>
 
+<!-- link to all profiles -->
 <%= link_to "See users", users_path %></br>
