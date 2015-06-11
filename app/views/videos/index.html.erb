@@ -11,7 +11,7 @@
 	<div class="contain">
 		<div class="idStamp">
 			<span class="idThumb"><%= image_tag video.user.image.url(:small) %></span>
-			<%= video.user.user_name %>
+			<%= link_to video.user.user_name, user_path(video.user) %>
 			<span class="dateStamp"><%= video.updated_at.strftime("Uploaded %b %-d, %Y") %></span>
 		</div>	
 		<iframe src="https://www.youtube.com/embed/<%= YoutubeID.from(video.source) %>?modestbranding=1" frameborder="0" seamless></iframe>
