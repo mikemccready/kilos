@@ -26,8 +26,43 @@ html {
  	color: black;
 }
 
-nav ul {
+nav {
+	position: absolute;
+	width: 100%;
+ 	padding: .25em 2.5% 0;	
+ 	background-color: rgba(0,0,0,0);
+ 	margin: 0;
+ 	border: none;	
+ 	color: white;
+} 
+
+#menu_logo {
+	width: 7em;
+	display: inline-block;
+}
+
+nav button {
+	position: absolute;
+	right:2.5%;
+	display: inline-block;
 	text-align:right;
+}
+
+nav ul {
+	position: absolute;
+	right:2.5%;
+	display: inline-block;
+	text-align:right;	
+}
+
+nav li {
+	right:0;
+	text-align:right;
+
+}
+
+nav a {
+	color: white;
 }
 
 nav button {
@@ -61,17 +96,14 @@ nav button {
 	margin: .5em 0;
 }
 
-.navbar-toggle {
- 	margin:0;
-}
-
 .pageHead {
 	position:relative;
-	top:-20px;
+	top:0;
  	width: 100%;
  	height: 33.333333vw;
  	margin: 0 0 2em;
  	overflow:hidden;
+ 	z-index:-10;
 
 }
 
@@ -83,7 +115,7 @@ nav button {
 
 
 .pageHead h2 {
-	position:absolute;
+	position: absolute;
 	display: inline-block;
 	font-family: "league-gothic","league gothic","futura";
 	letter-spacing: .125em;
@@ -93,27 +125,12 @@ nav button {
 	font-size: 6vw;
 	color: black;
 	background-color: white;
-
-
 }
 
 body {
  	font-family: 'futura-pt', 'futura';
  	background-color: rgba(240,240,240,1);
 }
-
-nav {
- 	padding: .25em 2.5% 0;	
- 	background-color: white;
- 	margin: 0;
- 	border: none;	
-} 
-
-#menu_logo {
-	width: 7em;
-	display: inline-block;
-}
-
 
 a {
 	text-decoration: none;
@@ -233,34 +250,6 @@ form {
 }
 
 
-@media (max-width: 990000px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-
-    .navbar-collapse.collapse.in { display: block !important; }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin: 7.5px -15px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-}
 
 
 
