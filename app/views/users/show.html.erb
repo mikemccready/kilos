@@ -1,12 +1,13 @@
+<!-- auto update current user name, put into uppercase -->
 <h2><%= @user.user_name.upcase %></h2>
-   <div class="contain">
+<!-- iterates through each user video, placing it within a wrapper -->
+<div class="contain">
    <% @videos.each do |v| %>
    		<iframe src="https://www.youtube.com/embed/<%= YoutubeID.from(v.source) %>?modestbranding=1" frameborder="0" seamless></iframe>
      	<h3><%= v.title %></h3>
 		<p><%= v.description %></p>
      	<p><%= link_to "See more", video_path(v) %></p>
    <% end %>
-   </div>
-  
-
+</div> 
+<!-- links back to user list -->
 <%= link_to "Back to users", users_path %></br>
