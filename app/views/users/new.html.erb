@@ -1,12 +1,4 @@
-<div class="pageHead">
-	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">		
-</div>
-
 <h2>SIGN UP</h2>
-<div class="up">
-	<%= link_to 'View as Guest', "videos" %>
-	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-</div>
 <!-- form to create a new user account -->
 <%= form_for(@user) do |f| %>
 	<div class="form-group">
@@ -32,5 +24,9 @@
 	<!-- submit button, create account -->
 	<%= f.submit "JOIN KILOS", class: "submit" %> 
 	<!-- go to login screen -->
-	<button class="submit" id="login"><%= link_to "LOGIN", new_session_path %></button> 
+	<button class="submit" id="login"><%= link_to "LOGIN", new_session_path %></button>
+	<div class="up">
+		<%= link_to 'BE OUR GUEST', root_path %>
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+	</div> 
 <% end %>

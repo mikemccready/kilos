@@ -1,14 +1,5 @@
-<div class="pageHead">
-	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">		
-</div>
-
 <!-- auto update current user name, put into uppercase -->
 <h4><%= @video.title.upcase %></h4>
-<div class="up">
-	<%= link_to 'Upload Video', new_video_path %>
-	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-</div>
-
 <div class="contain">
 	<!-- wrap around video content -->
 	<div class="vidframe">
@@ -24,7 +15,10 @@
 		<% end %>
 	</div>
 </div>
-
 <!-- link back to video feed -->
 <%= link_to "Back to Feed", videos_path %></br>
+<div class="up">
+  <%= link_to 'UPLOAD     ', "videos/new" %>
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</div>  
 

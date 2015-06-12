@@ -1,22 +1,22 @@
 <h2>UPLOAD VIDEO</h2>
 <!-- form for video upload -->
 <%= form_for @video do |v| %>
-	<div>
-		<%= v.label :source %></br>
-		<%= v.text_field :source %>
-	</div>	
-	<div>
-		<%= v.label :title %></br>
-		<%= v.text_field :title %>
+	<div class="form-group">
+		<label>Source</label>
+		<%= v.text_field :source, placeholder: "www.source.com", class: "form-control" %>
 	</div>
-	<div>
-		<%= v.label :description %></br>
-		<%= v.text_area :description %>
+	<div class="form-group">
+		<label>Title</label>
+		<%= v.text_field :title, placeholder: "Enter Title", class: "form-control" %>    
 	</div>
-  	<div> 
-    	<%= v.submit "Post" %> 
-  	</div> 
+	<div class="form-group">
+		<label>Description</label>
+		<%= v.text_area :description, placeholder:"Description", class: "form-control" %>
+	</div> 
+	<!-- upload vid -->
+	<%= v.submit "UPLOAD", class: "submit" %> 
+	<!-- back to feed -->
+	<button class="submit" id="login"><%= link_to "CANCEL", root_path %></button>
 <% end %>
-
 <!-- link to video feed -->
 <%= link_to "Back to list", videos_path %></br>

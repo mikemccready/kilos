@@ -14,8 +14,6 @@
         <img src="<%= asset_path( 'Menu_Logo.png' ) %>" id="menu_logo">
         <!-- Brand and toggle get grouped for better mobile display -->
         <% if current_user %>
-            
-            
             <button type="button" class="btn btn-disabled dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="idThumb"><%= image_tag current_user.image.url(:small) %></span><span class="menu-hamburger"></span></button>
             <ul class="dropdown-menu" role="menu">
                 <li role="presentation"><%= link_to current_user.user_name, current_user %></li>
@@ -25,7 +23,6 @@
                 <li role="presentation"><%= link_to "Kilo Camp", users_path %></li>
             </ul>
         <% else %>
-            <img src="<%= asset_path( 'Menu_Logo.png' ) %>" id="menu_logo">
             <button type="button" class="btn btn-disabled dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="idThumb"><%= asset_path( 'pawn.jpg' ) %></span><span class="menu-hamburger"></span></button>
                 <ul class="dropdown-menu" role="menu">
                     <li role="presentation"><%= link_to "Login", new_session_path %></li>
@@ -39,9 +36,5 @@
     </div>
 	<%= yield %>
 </div>
-<div class="up">
-  <%= link_to 'UPLOAD     ', "videos/new" %>
-  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-</div>  
 </body>
 </html>

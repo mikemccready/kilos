@@ -1,12 +1,5 @@
-<div class="pageHead">
-    <img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">       
-</div>
-
 <h2>SIGN IN</h2>
-<div class="up">
-    <%= link_to 'View as Guest', "videos" %>
-    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-</div>
+
 <!-- form to login, creating new session -->
 <%= form_for(:session, url: login_path) do |f| %> 
 	<div class="form-group">
@@ -22,6 +15,9 @@
     <button class="submit" id="login"><%= link_to "JOIN KILOS", new_user_path %></button>  
 <% end %>
 
-
+<div class="up">
+    <%= link_to 'BE OUR GUEST', root_path %>
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</div>
 
 
