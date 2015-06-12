@@ -255,7 +255,7 @@ form {
 		display:inline-block;
 		padding: 0;
 		max-width:47.5%;
-		top:5em;
+		top:8em;
 		left:50%;
 	}
 
@@ -263,12 +263,14 @@ form {
 		position: absolute;
 		width: 45%;
 		left:50%;
+		top:2em;
 	}
 
 	.dateStamp {
 		display: block;	
 		position:relative;
-		left:0
+		left:0;
+		margin: 0 0 1em;
 	}
 
 }

@@ -1,10 +1,14 @@
 <div class="pageHead">
-    <img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero"> 
-    <h2><%= @user.user_name.upcase %></h2>
-    <div class="up">
-        <%= link_to 'Users', users_path %>
-    </div>  
+    <img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">       
 </div>
+
+<!-- auto update current user name, put into uppercase -->
+<h2><%= @user.user_name.upcase %></h2>
+<div class="up">
+    <%= link_to 'Video Feed', root_path %>
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</div>
+
 <!-- form to edit user profile -->
 <%= form_for(@user) do |f| %>
     <div class="form-group">
