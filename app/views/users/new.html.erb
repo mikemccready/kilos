@@ -1,9 +1,11 @@
 <div class="pageHead">
-	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero"> 
-	<h2>SIGN UP</h2>
-	<div class="up">
-		<%= link_to 'View as Guest', "videos" %>
-	</div>  
+	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">		
+</div>
+
+<h2>SIGN UP</h2>
+<div class="up">
+	<%= link_to 'View as Guest', "videos" %>
+	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 </div>
 <!-- form to create a new user account -->
 <%= form_for(@user) do |f| %>
