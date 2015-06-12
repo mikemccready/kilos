@@ -1,17 +1,32 @@
 <!-- auto update current user name, put into uppercase -->
 <h2><%= image_tag @user.image.url(:small)%>  <%= @user.user_name.upcase %></h2>
 <!-- iterates through each user video, placing it within a wrapper -->
-<div class="contain">
-   <% @videos.each do |v| %>
+<% @videos.each do |v| %>
+	<div class="contain">
+   		<div class="idStamp">
+			<span class="idThumb"><%= image_tag v.user.image.url(:small) %></span>
+			<%= link_to v.user.user_name, user_path(v.user) %>
+			<span class="dateStamp"><%= v.updated_at.strftime("Uploaded %b %-d, %Y") %></span>
+		</div>
    		<iframe src="https://www.youtube.com/embed/<%= YoutubeID.from(v.source) %>?modestbranding=1" frameborder="0" seamless></iframe>
-     	<h3><%= v.title %></h3>
-		<p><%= v.description %></p>
-     	<p><%= link_to "See more", video_path(v) %></p>
-   <% end %>
-</div> 
+   		<div class="textFrame">
+     		<h3><%= link_to v.title, video_path(v) %></h3>
+			<p><%= v.description %></p>
+			<% if (current_user != nil && current_user.id == v.user_id) ||
+			  	  (current_user != nil && current_user.id == 1) %>
+				<%= link_to 'Edit Video   ', edit_video_path(v.id) %>
+				<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+			<% else %>	
+				<!-- edit option not visable -->	
+			<% end %>
+		</div>
+	</div> 
+<% end %>
 <!-- links back to user list -->
 <%= link_to 'Video Feed', root_path %>
 <div class="up">
-	<%= link_to 'BE OUR GUEST', root_path %>
+	<%= link_to 'UPLOAD', new_video_path %>
 	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 </div> 
+
+
