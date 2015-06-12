@@ -15,7 +15,7 @@
         <% if current_user %>
             
             <img src="<%= asset_path( 'Menu_Logo.png' ) %>" id="menu_logo">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="idThumb"><%= image_tag current_user.image.url(:small) %></span><span class="caret"></span></button>
+            <button type="button" class="btn btn-disabled dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="idThumb"><%= image_tag current_user.image.url(:small) %></span><span class="menu-hamburger"></span></button>
             <ul class="dropdown-menu" role="menu">
                 <li role="presentation">Hi <%= current_user.user_name%></li>
                 <li role="presentation"><%= link_to "Sign Out", logout_path, method: "delete" %></li>
@@ -23,7 +23,7 @@
             </ul>
         <% else %>
             <img src="<%= asset_path( 'Menu_Logo.png' ) %>" id="menu_logo">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="idThumb"><%= asset_path( 'pawn.jpg' ) %></span><span class="caret"></span></button>
+            <button type="button" class="btn btn-disabled dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="idThumb"><%= asset_path( 'pawn.jpg' ) %></span><span class="menu-hamburger"></span></button>
                 <ul class="dropdown-menu" role="menu">
                     <li role="presentation"><%= link_to "Login", new_session_path %></li>
 			     <li role="presentation"><%= link_to "Signup", new_user_path %></li>
