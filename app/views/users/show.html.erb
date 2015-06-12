@@ -1,7 +1,3 @@
-<div class="pageHead">
-	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">		
-</div>
-
 <!-- auto update current user name, put into uppercase -->
 <h2><%= image_tag @user.image.url(:small)%>  <%= @user.user_name.upcase %></h2>
 <!-- iterates through each user video, placing it within a wrapper -->
@@ -15,3 +11,7 @@
 </div> 
 <!-- links back to user list -->
 <%= link_to 'Video Feed', root_path %>
+<div class="up">
+	<%= link_to 'BE OUR GUEST', root_path %>
+	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</div> 
