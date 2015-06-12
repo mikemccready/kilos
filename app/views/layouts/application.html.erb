@@ -10,11 +10,12 @@
   <script>try{Typekit.load();}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1"></head>
 <body>
-    <nav>
+    <nav> 
+        <img src="<%= asset_path( 'Menu_Logo.png' ) %>" id="menu_logo">
         <!-- Brand and toggle get grouped for better mobile display -->
         <% if current_user %>
             
-            <img src="<%= asset_path( 'Menu_Logo.png' ) %>" id="menu_logo">
+            
             <button type="button" class="btn btn-disabled dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="idThumb"><%= image_tag current_user.image.url(:small) %></span><span class="menu-hamburger"></span></button>
             <ul class="dropdown-menu" role="menu">
                 <li role="presentation"><%= link_to current_user.user_name, current_user %></li>
@@ -33,7 +34,14 @@
 	   <% end %>
     </nav>
 <div class="wrap">
+    <div class="pageHead">
+        <img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">       
+    </div>
 	<%= yield %>
 </div>
+<div class="up">
+  <%= link_to 'UPLOAD     ', "videos/new" %>
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</div>  
 </body>
 </html>

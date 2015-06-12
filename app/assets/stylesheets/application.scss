@@ -25,6 +25,7 @@ html {
  	font-weight: 400;
  	color: black;
  	background-color: rgba(225,225,225,1);
+
 }
 
 nav {
@@ -35,6 +36,7 @@ nav {
  	margin: 0;
  	border: none;	
  	color: white;
+ 	z-index:1000;
 } 
 
 #menu_logo {
@@ -73,11 +75,13 @@ nav .btn, nav .btn:hover {
 }
 
 .dropdown-menu {
+	position: absolute;
 	top:3.25em;
-	left:60%;
-	width: 37.5%;
+	left: 50%;
+	right:2.5%;
 	background-color: rgba(255,255,255,.8);
 	border-radius: 0;
+	padding:0;
 
 }
 	
@@ -118,7 +122,6 @@ nav .btn, nav .btn:hover {
 	top:0;
  	width: 100%;
  	height: 33.33333333333333vw;
- 	z-index:-10;
 }
 
 .hero{
@@ -129,7 +132,6 @@ nav .btn, nav .btn:hover {
 
 
 h2 {
-
 	display: inline-block;
 	font-family: "league-gothic","league gothic","futura";
 	letter-spacing: .125em;
@@ -153,16 +155,22 @@ a:hover {
 }
 
 .up {
-	position: absolute;
+	position: fixed;	
 	display: inline-block;
 	right:0;
 	bottom: 0;
 	color:rgb(244,30,30);
 	margin:0;
-	padding: 0 2.5%; 	
+	padding: 0 2.5%; 
+	font-size: 1.25em;	
+	background-color: rgba(255,255,255,.8);
+}
 
+.up a {
 	color: black;
-	background-color: white;
+	font-family: "league-gothic","league gothic","futura";	
+	letter-spacing: .125em;
+
 }
 
 span {
@@ -179,7 +187,7 @@ h4 {
 	font-family: "league-gothic","league gothic","futura";	
 	letter-spacing: .125em;
 	margin-left: 2.5%;
-	font-size: 4.5vw;
+	font-size: 5vw;
 
 }
 
