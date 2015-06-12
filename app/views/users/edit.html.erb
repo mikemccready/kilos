@@ -1,14 +1,5 @@
-<div class="pageHead">
-    <img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">       
-</div>
-
 <!-- auto update current user name, put into uppercase -->
 <h2><%= @user.user_name.upcase %></h2>
-<div class="up">
-    <%= link_to 'Video Feed', root_path %>
-    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-</div>
-
 <!-- form to edit user profile -->
 <%= form_for(@user) do |f| %>
     <div class="form-group">
@@ -32,6 +23,13 @@
         <%= f.file_field :image, class: "picUpload"%>
     </div>
     <%= f.submit "UPDATE PROFILE", class: "submit" %> 
+    <!-- delete profile, why would you do such a thing -->
+    <%= link_to "Delete Profile", user_path, method: :delete, data: { confirm: "Are you sure you want to delete this profile?"} %></br>
+    <!-- back to video feed -->
+    <%= link_to "Back to Feed", root_path %>     
 <% end %>
-<!-- delete profile, why would you do such a thing -->
-<%= link_to "Delete Profile", user_path, method: :delete, data: { confirm: "Are you sure you want to delete this profile?"} %> 
+
+<div class="up">
+    <%= link_to 'UPLOAD     ', "videos/new" %>
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</div> 
