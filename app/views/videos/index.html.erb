@@ -1,13 +1,12 @@
 <div class="pageHead">
-	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">	
-	<h2>TRAINING VIDEO</h2>
-	<div class="up">
-		<%= link_to 'Post Video     ', "videos/new" %>
-		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-	</div>	
+	<img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">		
 </div>
 
-
+<h2>TRAINING VIDEO</h2>
+<div class="up">
+	<%= link_to 'Post Video     ', "videos/new" %>
+	<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+</div>
 <!-- iterates through each uploaded video into a formatted container -->
 <% @videos.each do |video| %>
 	<div class="contain">

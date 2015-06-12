@@ -37,7 +37,7 @@ nav {
 } 
 
 #menu_logo {
-	width: 7em;
+	width: 30%;
 	display: inline-block;
 }
 
@@ -65,25 +65,29 @@ nav a {
 	color: white;
 }
 
-nav button {
+nav .btn, nav .btn:hover {
  	height: 3em;
+ 	background: none;
  	border: none;
 }
 
+
+
 .idThumb {
 	display:inline-block;
- 	width: 2em;
- 	height:2em;
- 	border-radius:1em;
+ 	width: 2.5em;
+ 	height:2.5em;
+ 	background-color:gray;
+ 	border-radius:1.25em;
+ 	border: 1px solid white;
  	display: inline-block;
  	overflow: hidden;
- 	margin:0 0 -.5em;
 }
 
 .idStamp {
 	position:relative;
 	display:inline-block;
-	margin: 0em 0 .5em;
+	margin: .25em 0;
 	color: black;
 	width:100%;
 }
@@ -93,18 +97,15 @@ nav button {
 	display:inline-block;
 	color:rgb(150,150,150);
 	right:0;
-	margin: .5em 0;
+	margin: 1.25em 0;
 }
 
 .pageHead {
 	position:relative;
 	top:0;
  	width: 100%;
- 	height: 33.333333vw;
- 	margin: 0 0 2em;
- 	overflow:hidden;
+ 	height: 33.33333333333333vw;
  	z-index:-10;
-
 }
 
 .hero{
@@ -114,22 +115,20 @@ nav button {
 }
 
 
-.pageHead h2 {
-	position: absolute;
+h2 {
+
 	display: inline-block;
 	font-family: "league-gothic","league gothic","futura";
 	letter-spacing: .125em;
-	bottom: -2em;
-	margin:0;
-	padding: 0 2.5% 2em; 	
-	font-size: 6vw;
+	margin:.1em 2.5% 0; 	
+	font-size: 7.5vw;
 	color: black;
-	background-color: white;
 }
 
 body {
  	font-family: 'futura-pt', 'futura';
- 	background-color: rgba(240,240,240,1);
+ 	background-color: rgba(200,200,200,1);
+ 	background: url('bg.jpg') no-repeat center center fixed;
 }
 
 a {
@@ -174,7 +173,7 @@ iframe {
 
 .contain {
 	position:relative;	
-	padding: .5em 2.5%;
+	padding: .25em 2.5%;
  	background-color: white;
  	margin: 0em 0 1em ;
  	width: 100%;	
@@ -220,6 +219,11 @@ form {
 
 
 @media (min-width:850px) {
+
+	h2 {
+		font-size: 5vw;
+
+	}
 	.contain iframe {
 		display: inline-block;
 		width: 50%;
