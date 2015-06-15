@@ -2,8 +2,11 @@
 <h2><%= image_tag @user.image.url(:small)%>  <%= @user.user_name.upcase %></h2>
 <p>Friends</p>
 	<ul>
-		<% @user.followers.each do |f| %>
-			<li><%= f.user_name %></li>
+		<% @user.followings.each do |f| %>
+			<li><%= f.follower.user_name %>
+				<%= link_to "Unfollow", f, :method => :delete %>
+			</li>
+
 		<% end %>
 	</ul>
 <!-- iterates through each user video, placing it within a wrapper -->
