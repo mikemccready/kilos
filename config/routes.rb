@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :followings
   root "videos#index"
 
   get "login" => "sessions#new", as: :new_session
