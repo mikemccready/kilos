@@ -1,12 +1,13 @@
 class FollowingsController < ApplicationController
 
   def create
-    @following = Following.new(following_params)
+    @following = current_user.followings.build(:follower_id => params[:follower_id])
     if @following.save
       flash[:notice] = "Now following"
-      redirect_to user_path
+      redirect_to users_path
     else
-      render action:'new'
+      flash[:notice] = "Unable to follow"
+      redirect_to users_path
     end
   end
 
@@ -14,7 +15,7 @@ class FollowingsController < ApplicationController
     @following = Following.find(params[:id])
     @following.destroy
     flash[:notice] = "Un-followed"
-    redirect_to user_path
+    redirect_to users_path
   end
 
   private

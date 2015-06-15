@@ -1,5 +1,11 @@
 <!-- auto update current user name, put into uppercase -->
 <h2><%= image_tag @user.image.url(:small)%>  <%= @user.user_name.upcase %></h2>
+<p>Friends</p>
+	<ul>
+		<% @user.followers.each do |f| %>
+			<li><%= f.user_name %></li>
+		<% end %>
+	</ul>
 <!-- iterates through each user video, placing it within a wrapper -->
 <% @videos.each do |v| %>
 	<div class="contain">
