@@ -1,14 +1,21 @@
 <!-- auto update current user name, put into uppercase -->
 <h2><%= image_tag @user.image.url(:small)%>  <%= @user.user_name.upcase %></h2>
-<p>Friends</p>
-	<ul>
-		<% @user.followings.each do |f| %>
-			<li><%= f.follower.user_name %>
-				<%= link_to "Unfollow", f, :method => :delete %>
-			</li>
+<p>Following</p>
+<ul>
+	<% @user.followings.each do |f| %>
+		<li><%= f.follower.user_name %>
+			<%= link_to "Unfollow", f, :method => :delete %>
+		</li>
+	<% end %>
+</ul>
 
-		<% end %>
-	</ul>
+<p>Followers</p>
+<ul>
+	<% @user.inverse_followers.each do |f| %>
+		<li><%= f.user_name %>
+		</li>
+	<% end %>
+</ul>	
 <!-- iterates through each user video, placing it within a wrapper -->
 <% @videos.each do |v| %>
 	<div class="contain">
