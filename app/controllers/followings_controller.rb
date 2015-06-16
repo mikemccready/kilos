@@ -1,5 +1,9 @@
 class FollowingsController < ApplicationController
 
+  def index
+
+  end
+
   def create
     @following = current_user.followings.build(:follower_id => params[:follower_id])
     if @following.save

@@ -10,6 +10,7 @@
 </ul>
 
 <p>Followers</p>
+	
 <ul>
 	<% @user.inverse_followers.each do |f| %>
 		<li><%= f.user_name %>

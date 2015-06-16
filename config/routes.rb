@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :followings
-  root "videos#index"
+  root "sessions#new"
 
   get "login" => "sessions#new", as: :new_session
   post "login" => "sessions#create"
@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   get "videos/:id/edit" => "videos#edit", as: :edit_video
   patch "videos/:id" => "videos#update"
   delete "videos/:id" => "videos#destroy"
+
+
 
 
 
