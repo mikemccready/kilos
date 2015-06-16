@@ -23,7 +23,7 @@
                 <li role="presentation"><%= link_to "Kilo Camp", users_path %></li>
             </ul>
         <% else %>
-            <button type="button" class="btn btn-disabled dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="idThumb"><%= asset_path( 'pawn.jpg' ) %></span><span class="menu-hamburger"></span></button>
+            <button type="button" class="btn btn-disabled dropdown-toggle btn-lg aria-label="Right Align"" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
                 <ul class="dropdown-menu" role="menu">
                     <li role="presentation"><%= link_to "Login", new_session_path %></li>
 			        <li role="presentation"><%= link_to "Signup", new_user_path %></li>
