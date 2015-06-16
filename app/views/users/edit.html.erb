@@ -26,10 +26,10 @@
     <!-- delete profile, why would you do such a thing -->
     <%= link_to "Delete Profile", user_path, method: :delete, data: { confirm: "Are you sure you want to delete this profile?"} %></br>
     <!-- back to video feed -->
-    <%= link_to "Back to Feed", root_path %>     
+    <%= link_to "Back to Feed", videos_path %>     
 <% end %>
 
 <div class="up">
-    <%= link_to 'UPLOAD     ', "videos/new" %>
+    <%= link_to 'UPLOAD     ', new_videos_path %>
     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 </div> 
