@@ -9,7 +9,7 @@
 	<% end %>
 </ul>
 
-<p>Followers</p>
+<%= link_to "followers", followings_path %>
 	
 <ul>
 	<% @user.inverse_followers.each do |f| %>

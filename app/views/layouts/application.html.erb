@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+
+<html class="blur">
 <head>
   <title>KILOS</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -9,6 +10,7 @@
   <script src="//use.typekit.net/dbt7vos.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1"></head>
+
 <body>
     <nav> 
         <img src="<%= asset_path( 'Menu_Logo.png' ) %>" id="menu_logo">
@@ -23,7 +25,7 @@
                 <li role="presentation"><%= link_to "Kilo Camp", users_path %></li>
             </ul>
         <% else %>
-            <button type="button" class="btn btn-disabled dropdown-toggle btn-lg aria-label="Right Align"" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+            <button type="button" class="btn btn-disabled dropdown-toggle btn-lg" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
                 <ul class="dropdown-menu" role="menu">
                     <li role="presentation"><%= link_to "Login", new_session_path %></li>
 			        <li role="presentation"><%= link_to "Signup", new_user_path %></li>
@@ -34,7 +36,24 @@
     <div class="pageHead">
         <img src="<%= asset_path( 'kiloCover.jpg' ) %>" class="hero">       
     </div>
-	<%= yield %>
+    
+	   <%= yield %> 
+
 </div>
 </body>
+
+
+
 </html>
+
+
+
+<script type="text/javascript">
+$(document).ready( function() {
+    $('.blur').blurjs({
+        source: '.blur',
+        radius: 100,
+        overlay: 'rgba(150,150,150,.5)'
+    });
+});
+</script>

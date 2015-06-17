@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   delete "videos/:id" => "videos#destroy"
 
 
-
+  get "users/:user_id/followings" => "followings#index"
 
 
 

@@ -80,6 +80,10 @@ nav .btn, nav .btn:hover {
 
 }
 
+.glyphicon-menu-hamburger:hover {
+	font-size:2em;
+}
+
 
 .dropdown-menu {
 	position: absolute;
@@ -147,9 +151,17 @@ h2 {
 	color: black;
 }
 
+.blur {
+    background: url('kiloCover.jpg') no-repeat  fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+}
+
 body {
- 	font-family: 'futura-pt', 'futura';
- 	background: url('bg.jpg') no-repeat center center fixed;
+	background: none;
 }
 
 a {
