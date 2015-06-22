@@ -1,28 +1,21 @@
-== README
+KILOS is a training resource for combat sport athletes. The app allows users to follow their favorite members and share useful techniques through uploaded video. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Notable features:
 
-Things you may want to cover:
+Heroku deployed app: https://kilosbjj.herokuapp.com/
+CRUD functionality with video and user models
+Fully responsive design
+User profile creation
+User authentication
+Paperclip for image upload
+Video posting
+Follow Users
+Asset Pipeline
 
-* Ruby version
+Stack:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+HTML5 & CSS3
+Bootstrap
+Javascript & jQuery
+Ruby on Rails
+Heroku
