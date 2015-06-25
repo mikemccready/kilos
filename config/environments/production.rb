@@ -33,7 +33,7 @@ Rails.application.configure do
   # config.assets.compile = false
 
 config.cache_classes = true
-config.serve_static_assets = true
+#config.serve_static_assets = true
 config.assets.compile = true
 # config.assets.digest = true
 
