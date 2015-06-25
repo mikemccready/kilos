@@ -28,10 +28,17 @@ test:
   database: Kilos_bjj_test
 
 production:
+  # <<: *default
+  # database: Kilos_bjj_production
+  # username: awesome_blog
+  # password: <%= ENV['AWESOME_BLOG_DATABASE_PASSWORD'] %>
+
+
+production:
   <<: *default
-  database: Kilos_bjj_production
-  username: awesome_blog
-  password: <%= ENV['AWESOME_BLOG_DATABASE_PASSWORD'] %>
+  database: <your_app_name_here>_production
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
