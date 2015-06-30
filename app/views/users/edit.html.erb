@@ -2,30 +2,33 @@
 <h2><%= @user.user_name.upcase %></h2>
 <!-- form to edit user profile -->
 <%= form_for(@user) do |f| %>
-    <div class="form-group">
-        <label>User Name</label>
-        <%= f.text_field :user_name, placeholder: "Enter User Name", class: "form-control" %>
-    </div>
-    <div class="form-group">
-        <label>Email</label>
-        <%= f.email_field :email, placeholder: "Enter Email", class: "form-control" %>    
-    </div>
-    <div class="form-group">
-        <label>Password</label>
-        <%= f.password_field :password, placeholder:"Password", class: "form-control" %>
-    </div> 
-    <div class="form-group">
-        <label>Confirm Password</label>
-        <%= f.password_field :password_confirmation, placeholder:"Confirm Password", class: "form-control" %>
-    </div>
-    <div class="form-group">
-        <label>Profile Picture</label>
-        <%= f.file_field :image, class: "picUpload"%>
-    </div>
-    <%= f.submit "UPDATE PROFILE", class: "submit" %> 
-    <!-- delete profile, why would you do such a thing -->
-    <%= link_to "Delete Profile", user_path, method: :delete, data: { confirm: "Are you sure you want to delete this profile?"} %></br>
-    <!-- back to video feed -->
+    <% if (current_user != nil && current_user.id == v.user_id) ||
+                  (current_user != nil && current_user.id == 1) %>
+        <div class="form-group">
+            <label>User Name</label>
+            <%= f.text_field :user_name, placeholder: "Enter User Name", class:     "form-control" %>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <%= f.email_field :email, placeholder: "Enter Email", class: "form- control" %>    
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <%= f.password_field :password, placeholder:"Password", class: "form    -control" %>
+        </div> 
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <%= f.password_field :password_confirmation, placeholder:"Confirm   Password", class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <label>Profile Picture</label>
+            <%= f.file_field :image, class: "picUpload"%>
+        </div>
+        <%= f.submit "UPDATE PROFILE", class: "submit" %> 
+        <!-- delete profile, why would you do such a thing -->
+        <%= link_to "Delete Profile", user_path, method: :delete, data: {   confirm: "Are you sure you want to delete this profile?"} %></br>
+    <% end %>    
+        <!-- back to video feed -->
     <%= link_to "Back to Feed", videos_path %>     
 <% end %>
 
