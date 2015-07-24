@@ -26,9 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'youtube_id', '~> 0.0.3'
 gem 'paperclip'
+gem 'aws-sdk', '<2.0'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'figaro'
 
 
 group :production do
