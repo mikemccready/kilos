@@ -1,5 +1,5 @@
 <!-- auto update current user name, put into uppercase -->
-<h2><%= image_tag @user.image.url(:small)%>  <%= @user.user_name.upcase %></h2>
+<h2><%= image_tag @user.image.url(:small), class:"idThumb" %>  <%= @user.user_name.upcase %></h2>
 <!-- <p>Following</p>
 <ul>
 	<%# if @user.followings.exists? %>
