@@ -20,10 +20,10 @@
             <button type="button" class="btn btn-disabled dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="idThumb"><%= image_tag current_user.image.url(:small) %></span><span class="menu-hamburger"></span></button>
             <ul class="dropdown-menu" role="menu">
                 <li role="presentation"><%= link_to current_user.user_name, current_user %></li>
-                <li role="presentation"><%= link_to "Sign Out", logout_path, method: "delete" %></li>
                 <li role="presentation"><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
                 <!-- link to all profiles -->
-                <li role="presentation"><%= link_to "Kilo Camp", users_path %></li>
+                <li role="presentation"><%= link_to "Kilo Camp", users_path %></li><hr>
+                <li role="presentation"><%= link_to "Sign Out", logout_path, method: "delete" %></li><hr>               
             </ul>
         <% else %>
             <button type="button" class="btn btn-disabled dropdown-toggle btn-lg" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
