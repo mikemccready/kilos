@@ -20,7 +20,7 @@
 
 
 html {
-	font-family: "futura-pt", "futura";
+	font-family: "futura-pt", futura;
 	margin:0;
  	font-size: .9em;
  	font-weight: 400;
@@ -32,6 +32,10 @@ html {
 		-o-background-size: cover;
 		background-size: cover;
 
+}
+
+body {
+	font-family: "futura-pt";
 }
 
 nav {
@@ -145,6 +149,11 @@ nav .btn, nav .btn:hover {
 	position: absolute;
  	top:0;
 	width:100%;
+}
+
+.yield {
+	max-width: 70em;
+	margin: 0 auto;
 }
 
 
@@ -287,6 +296,7 @@ form {
 		display: inline-block;
 		width: 50%;
 		height: 27.5vw;
+		margin: 0 1em 0 -1.5em;
 	}
 	
 	.textFrame {
