@@ -98,13 +98,17 @@ nav .btn, nav .btn:hover {
 .dropdown-menu {
 	position: absolute;
 	top:3.25em;
-	left: 50%;
+	left: 66%;
 	right:2.5%;
-	background-color: rgba(255,255,255,.8);
+	background-color: rgba(255,255,255,.95);
 	border-radius: 0;
 	padding:0;
 
 }
+
+.dropdown-menu li {
+	padding: 1em 0;
+}	
 	
 .idThumb {
 	display:inline-block;
@@ -133,7 +137,7 @@ nav .btn, nav .btn:hover {
 .dateStamp {
 	position:absolute;
 	display:inline-block;
-	color:rgb(150,150,150);
+	color: rgba(0,0,0,.5);
 	right:0;
 	margin: 1.25em 0;
 }
@@ -248,7 +252,7 @@ h4 {
 }
 
 .contain p {
-	color: rgb(150,150,150);
+	color: rgba(0,0,0,.5);
 }
 
 .formHead {
@@ -258,7 +262,7 @@ h4 {
 }
 
 form {
-	margin: 1em 5% 3em;
+	margin: 2em auto 5em;
 	width: 90%;
 	max-width: 50em;
 }
@@ -294,8 +298,8 @@ form {
 	}
 	.contain iframe {
 		display: inline-block;
-		width: 50%;
-		height: 27.5vw;
+		width: 66%;
+		height: 33vw;
 		margin: 0 1em 0 -1.5em;
 	}
 	
@@ -303,15 +307,15 @@ form {
 		position:absolute;
 		display:inline-block;
 		padding: 0;
-		max-width:47.5%;
-		top:8em;
-		left:50%;
+		max-width:30%;
+		top:7.5em;
+		left:66%;
 	}
 
 	.idStamp {
 		position: absolute;
-		width: 45%;
-		left:50%;
+		width: 30%;
+		left:66%;
 		top:2em;
 	}
 
