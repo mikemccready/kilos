@@ -30,4 +30,4 @@ Delivered on May 22th, 2015.
 
 ##Heroku deployed
 
-[Kilos](kilosbjj.herokuapp.com)
+[KILOS](https://kilosbjj.herokuapp.com/)
